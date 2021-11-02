@@ -43,7 +43,9 @@ Vue.component('product', {
                         Add to Cart
                     </button>
 
-                    
+                    <hr>
+                    <input type="text" v-model="vModelTest"/>
+                    <span> {{ vModelTest }} </span>
 
                 </div>
 
@@ -54,6 +56,7 @@ Vue.component('product', {
             product: 'Socks',
             brand: 'Tabajara',
             selectedVariant: 0,
+            vModelTest: 'v-model é diferente de v-bind',
             details: ['80% cotton', '20% polyester', 'Gender-neutral'],
             variants: [
                 {
