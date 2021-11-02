@@ -8,40 +8,13 @@
     <title>Vue initial</title>
 </head>
 <body>
-    <div class="nav-bar">
+    <div id="nav-bar">
+        <h3>NAVIGATION BAR</h3>
     </div>
 
     <div id="app">
-        <div class="product">
-
-            <div class="product-image">
-                <img :src="image">
-            </div>
-
-            <div class="product-info">
-                <h1>{{ product }}</h1>
-                <p v-if="inventory > 10">In stock</p>
-                <p v-else-if="inventory <= 10 && inventory > 0">Almost sold out!</p>
-                <p v-else>Out of Stock</p>
-
-                <ul>
-                    <li v-for="index in details"> {{ index }} </li>
-                </ul>
-
-                <div v-for="variant in variants" :key="variant.variantId">
-                    <p @mouseover="updateProduct(variant.variantImage)">{{ variant.variantColor}}</p>
-                </div>
-
-                <!-- <button v-on:click="cart += 1">Add to Cart</button> -->
-                <button v-on:click="addToCart">Add to Cart</button>
-
-                <div class="cart">
-                    <p>Cart({{cart}})</p>
-                </div>
-
-            </div>
-
-        </div>
+        <product :premium="premium"></product>
+        <product></product>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>

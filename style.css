@@ -2,12 +2,16 @@ body {
     font-family: tahoma;
     color: #282828;
     margin: 0px;
+    background-color: azure;
 }
 
-.nav-bar {
-    background-color: linear-gradient(-90deg, #84CF6A, #16C0B0);
+#nav-bar {
+    background-color: linear-gradient(-90deg, #77c2cf, #3e8ac9);
     height: 60px;
     margin-bottom: 15px;
+    border-bottom: 1px solid #0b1c2b;
+    text-align: center;
+    overflow: hidden;
 }
 
 .product {
@@ -53,7 +57,7 @@ button {
     color: white;
     height: 40px;
     width: 100px;
-font-size: 14px;
+    font-size: 14px;
 } 
 
 .disabledButton {
