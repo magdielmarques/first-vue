@@ -16,8 +16,9 @@
         <div class="cart">
             <p>Cart ( {{cart.length}} )</p>
         </div>
+        <!-- PRODUCT COMPONENT -->
+        <product :premium="premium" :test="testRoot" @show-message="showMessageRoot" @add-to-cart="updateCart"></product>
 
-        <product :premium="premium" @add-to-cart="updateCart"></product>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
